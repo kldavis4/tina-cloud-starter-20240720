@@ -28,9 +28,24 @@ const config = defineConfig({
     publicFolder: "public", // The public asset folder for your framework
     outputFolder: "admin", // within the public folder
   },
+  // search: {
+  //   tina: {
+  //     indexerToken: process.env.TINA_SEARCH_TOKEN,
+  //     stopwordLanguages: ['eng'],
+  //   },
+  //   indexBatchSize: 100,
+  //   maxSearchIndexFieldLength: 100,
+  // },
   schema: {
     collections: [Page, Post, Author, Global],
   },
+  tinaioConfig: {
+    frontendUrlOverride: 'http://localhost:3002', // 'https://app.tina.io'
+    identityApiUrlOverride: 'https://kldavis4-identity.tinajs.dev',
+    contentApiUrlOverride: 'https://kldavis4-content.tinajs.dev',
+    //assetsApiUrlOverride: 'https://kldavis4-assets.tinajs.dev'
+    assetsApiUrlOverride: 'https://assets-api-local-kldavis4.tinajs.dev'
+  }
 });
 
 export default config;
