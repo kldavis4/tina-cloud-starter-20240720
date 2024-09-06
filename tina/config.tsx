@@ -38,13 +38,6 @@ const config = defineConfig({
   // },
   schema: {
     collections: [Page, Post, Author, Global],
-  },
-  tinaioConfig: {
-    frontendUrlOverride: 'http://localhost:3002', // 'https://app.tina.io'
-    identityApiUrlOverride: 'https://kldavis4-identity.tinajs.dev',
-    contentApiUrlOverride: 'https://kldavis4-content.tinajs.dev',
-    //assetsApiUrlOverride: 'https://kldavis4-assets.tinajs.dev'
-    assetsApiUrlOverride: 'https://assets-api-local-kldavis4.tinajs.dev'
   }
 });
 
